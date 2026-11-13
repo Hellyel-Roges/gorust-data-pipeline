@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  # O Gateway Principal em Go
+  api-go:
+    build: 
+      context: ./api-go
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - RUST_GRPC_URL=rust-grpc:50051
+    depends_on:
+      - rust-grpc
+
+  # O Worker gRPC em Rust
+  rust-grpc:
+    build:
+      context: ./rust-grpc
+      dockerfile: Dockerfile
+    ports:
+      - "50051:50051"
