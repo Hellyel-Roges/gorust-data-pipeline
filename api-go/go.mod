@@ -1,3 +1,3 @@
-module github.com/hellyel/gorust-hybrid-arch/api-go
+module github.com/Hellyel-Roges/gorust-data-pipeline/api-go
 
-go 1.21
+go 1.27

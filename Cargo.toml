@@ -1,0 +1,12 @@
+[workspace]
+resolver = "2"
+members = [
+    "rust-core",
+    "rust-ffi",
+    "rust-grpc",
+    "api-rust",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"

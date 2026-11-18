@@ -1,19 +1,8 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
+// Gateway HTTP em Go (rotas /go/*, /cgo/*, /grpc/*)
 func main() {
-	fmt.Println("Gateway API Go inicializado.")
-	fmt.Println("Gateway API Go inicializado.")
-	fmt.Println("Gateway API Go inicializado.")
-	fmt.Println("Gateway API Go inicializado.")
-	        fmt.Println("*")
-	        fmt.Println("**")
-	        fmt.Println("***")
-		    fmt.Println("****")
-			fmt.Println("*****")
-
-
+	fmt.Println("api-go inicializado.")
 }

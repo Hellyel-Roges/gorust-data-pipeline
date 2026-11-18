@@ -1,0 +1,7 @@
+[package]
+name = "api-rust"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+rust-core = { path = "../rust-core" }

@@ -1,9 +1,10 @@
 [package]
 name = "rust-ffi"
-version = "0.1.0"
-edition = "2021"
+version.workspace = true
+edition.workspace = true
 
 [lib]
-crate-type = ["cdylib"] # Para compilar como C Shared Library (.so)
+crate-type = ["cdylib"]
 
 [dependencies]
+rust-core = { path = "../rust-core" }

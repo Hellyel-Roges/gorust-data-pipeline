@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package pipeline.v1;
+
+option go_package = "github.com/Hellyel-Roges/gorust-data-pipeline/api-go/proto/pipelinev1;pipelinev1";
+
+service PipelineService {
+  rpc ProcessCrypto (CryptoRequest) returns (CryptoResponse);
+  rpc ProcessDlp (DlpRequest) returns (DlpResponse);
+  rpc ProcessConcurrency (ConcurrencyRequest) returns (ConcurrencyResponse);
+}
+
+message CryptoRequest {
+  bytes payload = 1;
+  bytes salt = 2;
+  uint32 iterations = 3;
+}
+
+message CryptoResponse {
+  string hash_hex = 1;
+  uint64 compute_ns = 2;
+}
+
+message DlpRequest {
+  repeated string logs = 1;
+}
+
+message DlpResponse {
+  repeated string sanitized_logs = 1;
+  uint32 redactions_count = 2;
+  uint64 compute_ns = 3;
+}
+
+message ConcurrencyRequest {
+  uint32 tasks = 1;
+  uint32 io_delay_ms = 2;
+}
+
+message ConcurrencyResponse {
+  uint32 completed_tasks = 1;
+  uint64 checksum = 2;
+  uint64 compute_ns = 3;
+}

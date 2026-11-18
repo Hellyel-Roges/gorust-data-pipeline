@@ -1,19 +1,28 @@
-# Binários e executáveis
+# Rust (Cargo Workspace centralizado na raiz)
+/target/
+**/*.rs.bk
+
+# Binários e bibliotecas compiladas
 /api-go/api-go
-/rust-grpc/target
-/rust-ffi/target
 /benchmark/benchmark
 *.exe
 *.exe~
 *.dll
 *.so
 *.dylib
+*.a
 *.test
 *.out
 
-# Dependências Go
+# Go
 /api-go/vendor/
 /benchmark/vendor/
+
+# Python (gráficos)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
 
 # OS e IDE
 .idea/

@@ -1,3 +1,3 @@
-module github.com/hellyel/gorust-hybrid-arch/benchmark
+module github.com/Hellyel-Roges/gorust-data-pipeline/benchmark
 
-go 1.21
+go 1.27
